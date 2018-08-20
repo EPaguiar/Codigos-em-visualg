@@ -1,2 +1,2 @@
-# Codigos-em-C
-Atividades desenvolvidas em linguagem C
+# Codigos-em-visualg
+Atividades desenvolvidas em visualg
