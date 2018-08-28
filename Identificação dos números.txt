@@ -1,0 +1,50 @@
+algoritmo "Identificação do números digitados"
+// Função : Portugol
+// Autor : Eduardo de Paula Aguiar
+// Data : 07/05/2017
+var
+   n: vetor [1..5] de inteiro
+   i, impar, primos, j, p, soma: inteiro
+   menor, r, media: real
+
+inicio
+      impar <- 0
+      menor <- 9999
+      primos <- 0
+      soma <- 0
+      para i de 1 ate 5 faca
+           escreva ("digite seu número: ")
+           leia(n[i])
+           p <- 0
+           soma <- soma + n[i]
+           se n[i] < menor entao
+              menor <- n[i]
+           fimse
+
+           se n[i] mod 2 <> 0 entao
+              impar <- impar + 1
+           fimse
+           
+           para j de 1 ate n[i] faca
+                r <- n[i]/j
+                
+                se (r = 1) ou (r = n[i]) entao
+                   p <- p + 1
+                fimse
+                se p = 2 entao
+                   primos <- primos + 1
+                fimse
+                
+           fimpara
+           
+      fimpara
+      media <- soma / 5
+
+
+
+      escreval ("o menor número é: ", menor)
+      escreval ("a quantidade de impares é: ", impar)
+      escreval ("a quantidade de primos é: ", primos)
+      escreval ("a media dos valores é: ", media)
+
+fimalgoritmo
